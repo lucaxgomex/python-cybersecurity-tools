@@ -5,15 +5,15 @@ ENV_NAME="virtualenviroment"
 
 # Verifica se o diretório existe
 if [ -d "$ENV_NAME" ]; then
-    echo "O ambiente virtual '$ENV_NAME' já existe. Excluindo..."
+    echo "The virtual environment '$ENV_NAME' already exists. Deleting..."
     rm -rf "$ENV_NAME"
-    echo "Ambiente virtual removido com sucesso."
+    echo "Virtual environment sucessfully removed."
 else
-    echo "O ambiente virtual '$ENV_NAME' não existe."
+    echo "The virtual environment '$ENV_NAME' does not exist."
 fi
 
 # Cria um novo ambiente virtual
-echo "Criando novo ambiente virtual '$ENV_NAME'..."
+echo "Setting up a new virtual environment '$ENV_NAME'..."
 python3 -m venv "$ENV_NAME"
 ./"$ENV_NAME"/bin/activate
 
@@ -22,8 +22,8 @@ pip install scapy
 
 # Verifica se a criação foi bem-sucedida
 if [ $? -eq 0 ]; then
-    echo "Ambiente virtual '$ENV_NAME' criado com sucesso!"
+    echo "The virtual environment '$ENV_NAME' were sucessfully created!"
 else
-    echo "Erro ao criar o ambiente virtual '$ENV_NAME'."
+    echo "Error during the creation of '$ENV_NAME'."
     exit 1
 fi
