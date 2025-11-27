@@ -1,0 +1,46 @@
+# Run this first
+
+import os
+import sys
+import time
+from collections import defaultdict
+from scapy import sniff, IP # type: ignore
+
+THRESHOLD = 40
+
+print(f'THRESHOLD: {THRESHOLD}')
+
+def package_callback(package):
+    src_ip = package[IP].src
+    packet_count[src_ip] += 1
+    current_time = time.time()
+    time_interval = current_time - start_time[0]
+
+    if (time_interval >= 1):
+        for ip, count in packet_count.items():
+            packet_rate = count / time_interval
+            print(f"IP: {ip}")
+            print(f"Packet rate: {packet_rate}")
+
+            if (packet_rate > THRESHOLD) and (ip not in blocked_ips):
+                print(f"Blocking IP: {ip}; packet rate: {packet_rate}")
+
+                os.system(f"iptables -A INPUT -s {ip} - j DROP")
+                blocked_ips.add(ip)
+        packet_count.clear()
+        start_time[0] = current_time
+
+if __name__ == "__main__":
+    if (os.getuid() != 0):
+        print("This script requires root previleges.")
+        sys.exit(1)
+
+    packet_count = defaultdict(int)
+    start_time = [time.time()]
+    blocked_ips = set()
+
+    print("Monitoring network traffic...")
+    sniff(
+        filter="ip",
+        prn=package_callback
+    )

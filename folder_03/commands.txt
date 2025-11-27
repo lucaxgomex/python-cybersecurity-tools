@@ -1,0 +1,10 @@
+# Linux Command
+# Confirm that indeed currently there are no IPs being blocked
+sudo iptables -L INPUT -n
+
+# 1st Machine
+sudo python3 main.py
+
+# 2nd Machine
+# Send one packet to the target on `main.py` file
+sudo python nimda-worm.py 

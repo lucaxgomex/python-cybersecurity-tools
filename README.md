@@ -1,5 +1,3 @@
-![Alt text](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTJxcXRhMzFrdmE5YXAxdmVoeXJlenY1ajl3aDBjMzE4cGZkaW5qMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/12W5Sg2koWYnwA/giphy.gif "Optional title")
-
 ## Basic Python Script for Cybersecurity
 
 The Python programming language is well-known for its automation operations, libraries, machine learning applications and community support.
@@ -21,3 +19,18 @@ This projects has been desined to simulate the following tools:
 ### OS Fingerprinting
 
 ### Wrapper
+
+## ⚠️ Watch Out!
+
+### **Ethical and Legal Disclaimer**
+
+This tool is provided **strictly for educational, research, and ethical cybersecurity purposes only**. It is intended to help students, security professionals, and developers better understand input‑logging mechanisms in controlled and fully authorized environments.
+
+Unauthorized or malicious use of keyloggers or any similar monitoring tools is **illegal**, **unethical**, and may result in severe consequences, including:
+
+* Violation of privacy laws;
+* Criminal prosecution;
+* Civil liability;
+* Permanent damage to professional reputation.
+
+By using this project, you agree to operate it **only with explicit permission** from the system owner and in compliance with all applicable local, state, federal, and international laws. Misuse of this software is solely the responsibility of the user.
