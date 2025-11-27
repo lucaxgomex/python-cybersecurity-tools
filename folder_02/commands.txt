@@ -1,0 +1,2 @@
+# Unblock IP
+sudo iptables -D INPUT -s '192.168.x.x' -j DROP
