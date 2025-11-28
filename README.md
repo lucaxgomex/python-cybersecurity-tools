@@ -1,4 +1,4 @@
-## Basic Python Script for Cybersecurity
+# Basic Python Tools for Cybersecurity
 
 The Python programming language is well-known for its automation operations, libraries, machine learning applications and community support.
 
@@ -19,6 +19,18 @@ This projects has been desined to simulate the following tools:
 ### OS Fingerprinting
 
 ### Wrapper
+
+## 🎛️ Script
+
+To execute this project, you need to use the `scapy` library for the Python language. This tool allows you to interact with packets on computer networks, which is very useful when dealing with pentesting practices. 
+
+Each tool is segmented into a different directory, which ensures organization based on their respective functionalities. In each of these directories, there is a `script.sh` file, which ensures the creation of a virtual environment within which the aforementioned library is installed. This action eliminates the need to install any tools locally, in case the project needs to grow with the implementation of additional features.
+
+To create the virtual environment, access one of the directories with a tool that has caught your attention and execute the following command:
+
+```bash
+source script.sh
+```
 
 ## ⚠️ Watch Out!
 
